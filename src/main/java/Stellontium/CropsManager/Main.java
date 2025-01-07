@@ -12,7 +12,6 @@ public class Main extends JavaPlugin {
         config = getConfig();
         //使用可能か
         Bukkit.getPluginCommand("cm").setExecutor(new CropsManager(this));
-        new CropsManager(this);
         CropsManager.plantC = config.getBoolean("power.PlantCrops",false);
 
     }
