@@ -2,3 +2,5 @@ name: PlantCrops
 main: Stellontium.CropsManager.Main
 version: '${project.version}'
 api-version: "1.21.4"
+commands:
+  cm:

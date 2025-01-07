@@ -1,5 +1,6 @@
 package Stellontium.CropsManager;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -10,7 +11,9 @@ public class Main extends JavaPlugin {
         saveDefaultConfig();
         config = getConfig();
         //使用可能か
-        CropsManager.plantC = config.getBoolean("power.PlantCrops",false);
+        Bukkit.getPluginCommand("cm").setExecutor(new CropsManager(this));
         new CropsManager(this);
+        CropsManager.plantC = config.getBoolean("power.PlantCrops",false);
+
     }
 }
